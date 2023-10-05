@@ -33,25 +33,6 @@ export default {
     <section id="home">
         <div class="container h-75">
             <div class="row h-100">
-                <div class="d-flex justify-content-center">
-                    <div class="dropdown fs-2 mt-1">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-translate text-info"></i> {{ $i18n.locale }}
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                            <li v-for="locale in $i18n.availableLocales" :key="locale">
-                                <a :class="locale === $i18n.locale ? 'dropdown-item active' : 'dropdown-item'"
-                                    class="dropdown-item" href="#" @click="changeLocale(locale)">
-                                    {{ locale }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <RouterLink id to="/profile" class="btn-link fs-2 text-decoration-none position-relative py-1 px-2"><i
-                            class="bi bi-person-circle"></i>
-                    </RouterLink>
-                </div>
                 <div class="col h-100 d-flex flex-column align-items-center justify-content-center">
                     <img v-if="props.theme" class=" img-fluid" src="../assets/images/HangManGameWhite.svg"
                         alt="HangMan-Logo" height="">
@@ -61,7 +42,7 @@ export default {
                     <div class="d-flex flex-column gap-2 mb-3">
                         <!-- <a type="button" href="#about" class="btn btn-primary btn-lg">{{ $t("jumbotron.learnMore")
                         }}</a> -->
-                        <RouterLink to="/menu" class="btn btn-primary btn-lg">{{ $t("jumbotron.playNow") }} <span
+                        <RouterLink to="/leaderboard" class="btn btn-primary btn-lg">{{ $t("jumbotron.playNow") }} <span
                                 class="badge rounded-pill text-bg-warning">beta</span></RouterLink>
                         <!--                         <button id="disabled" type="button" class="btn btn-primary btn-lg" disabled>{{
                             $t("jumbotron.playNow")
@@ -77,7 +58,7 @@ export default {
 section {
     background-color: #ffffff;
     border-bottom: 5px solid red;
-    box-shadow: 0 0 30px 0 rgba(255, 0, 0, 0.333);
+    box-shadow: 0 30px 30px 0 #ff000029;
 }
 
 .btn-primary {
