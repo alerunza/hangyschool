@@ -1,5 +1,5 @@
-<!-- <script setup></script>
-
+<script setup></script>
+<!--
 <template>
     <h1 class="text-center my-3 fw-bold">{{ $t("leaderboard.title") }} <i class="bi bi-trophy-fill text-danger"></i></h1>
     <h4 class="text-center my-3">{{ $t("leaderboard.description") }}</h4>

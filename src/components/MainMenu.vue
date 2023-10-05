@@ -1,3 +1,5 @@
+<script setup></script>
+
 <script>
 import { ref, onMounted } from 'vue';
 import { auth } from '@/firebase.js';
