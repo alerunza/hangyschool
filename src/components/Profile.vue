@@ -133,7 +133,12 @@ function hideAlert() {
                 </div>
             </div>
         </div>
-        <div class="card mt-4 shadow">
+        <div class="d-flex justify-content-center">
+            <RouterLink id to="/" class="btn-link fs-2 text-decoration-none position-relative py-1 px-2"><i
+                    class="bi bi-house-fill"></i>
+            </RouterLink>
+        </div>
+        <div class="card mt-2 shadow">
             <div class="card-body">
                 <h3 class="card-title text-center mb-4">{{ $t("profile.welcome") }}</h3>
                 <div v-if="showAlert" class="alert alert-success w-75 mx-auto d-flex" role="alert">
@@ -203,5 +208,29 @@ function hideAlert() {
 <style scoped>
 a {
     cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #FF4D4D;
+    border-color: #FF4D4D;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #B33636;
+    border-color: #FF4D4D;
+}
+
+.btn-primary:active {
+    background-color: #4e0909;
+    border-color: #FF4D4D;
+}
+
+.btn-link {
+    color: #ff4d4d;
+}
+
+.btn-link:hover {
+    color: #b33636;
 }
 </style>
