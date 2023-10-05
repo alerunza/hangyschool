@@ -4,14 +4,8 @@ import MainMenu from "../components/MainMenu.vue";
 </script>
 
 <template>
-    <div class="row">
-        <div class="col-6">
-            <LeaderBoard />
-        </div>
-        <div class="col-6">
-            <MainMenu />
-        </div>
-    </div>
+    <MainMenu />
+    <LeaderBoard />
 </template>
 
 <style scoped></style>

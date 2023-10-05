@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-    <div class="main-menu">
+    <div class="main-menu mt-5">
         <div v-if="user">
             <div class="welcome-message">
                 {{ $t("menu.welcome") }}, <span class="text-danger fw-bold">{{ user.displayName }}</span>
@@ -58,12 +58,17 @@ export default {
         </div>
 
         <div class="welcome-message">
-            {{ $t("menu.mode") }}: <span class="text-success fw-bold">{{ selectedMode }}</span>
+            {{ $t("menu.mode") }}: <span v-if="selectedMode === 'Easy'" class="text-success fw-bold">{{ $t("menu.easy")
+            }}</span>
+            <span v-if="selectedMode === 'Medium'" class="text-success fw-bold">{{ $t("menu.medium")
+            }}</span>
+            <span v-if="selectedMode === 'Hard'" class="text-success fw-bold">{{ $t("menu.hard")
+            }}</span>
         </div>
 
         <div class="d-grid gap-3 w-25 mx-auto">
-            <button class="btn btn-primary btn-lg" @click="startGame">{{ $t("menu.game") }}</button>
-            <button class="btn btn-secondary btn-lg mb-5" @click="openModal">{{ $t("menu.selemod") }}</button>
+            <button class="btn btn-primary btn-md" @click="startGame">{{ $t("menu.game") }}</button>
+            <button class="btn btn-secondary btn-md mb-5" @click="openModal">{{ $t("menu.selemod") }}</button>
             <!-- <button class="btn btn-info btn-lg" @click="openHelp">Help</button> -->
         </div>
 
@@ -107,11 +112,6 @@ export default {
 <style scoped>
 [theme="custom-dark"] .modal-content {
     background-color: #43454e !important;
-}
-
-.main-menu {
-    margin-top: 100px;
-    padding: 0 20px;
 }
 
 .welcome-message {

@@ -207,7 +207,7 @@ watch(word, () => {
                     {{ $t('game.wins') }}: <span class="fw-bold">{{ vittorie }}</span>
                 </p>
                 <div class="d-flex justify-content-center">
-                    <RouterLink to="/menu" class="btn btn-primary">{{ $t('game.return') }}</RouterLink>
+                    <RouterLink to="/leaderboard" class="btn btn-primary">{{ $t('game.return') }}</RouterLink>
                 </div>
 
             </div>

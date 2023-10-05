@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar.vue";
 </script>
 
 <script>
-const previousLang = localStorage.lang || "English";
+const previousLang = localStorage.lang || "Italiano";
 const theme = ref(false);
 
 export default {
@@ -15,7 +15,7 @@ export default {
       this.$i18n.locale = previousLang;
     }
     else {
-      this.$i18n.locale = "English";
+      this.$i18n.locale = "Italiano";
     }
   },
   methods: {
@@ -32,7 +32,7 @@ export default {
 
 <template>
   <Navbar @locale-changed="saveLocale" @toggle-theme="toggleTheme" />
-  <RouterView @locale-changed="saveLocale" :theme="theme" />
+  <RouterView :theme="theme" />
   <!-- <Footer /> -->
 </template>
 
