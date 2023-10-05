@@ -133,11 +133,6 @@ function hideAlert() {
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <RouterLink id to="/" class="btn-link fs-2 text-decoration-none position-relative py-1 px-2"><i
-                    class="bi bi-house-fill"></i>
-            </RouterLink>
-        </div>
         <div class="card mt-2 shadow">
             <div class="card-body">
                 <h3 class="card-title text-center mb-4">{{ $t("profile.welcome") }}</h3>
