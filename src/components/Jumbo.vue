@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink, RouterView } from "vue-router";
 const props = defineProps(['theme'])
 
 </script>
@@ -47,6 +48,9 @@ export default {
                             </li>
                         </ul>
                     </div>
+                    <RouterLink id to="/profile" class="btn-link fs-2 text-decoration-none position-relative py-1 px-2"><i
+                            class="bi bi-person-circle"></i>
+                    </RouterLink>
                 </div>
                 <div class="col h-100 d-flex flex-column align-items-center justify-content-center">
                     <img v-if="props.theme" class=" img-fluid" src="../assets/images/HangManGameWhite.svg"
@@ -54,9 +58,9 @@ export default {
                     <img v-else class="img-fluid" src="../assets/images/HangManGame.svg" alt="HangMan-Logo" height="">
 
                     <p class="fs-3 w-50 mx-auto text-center" v-html="$t('jumbotron.gameDescription')"></p>
-                    <div class="d-flex flex-column gap-2 mb-5">
-                        <a type="button" href="#about" class="btn btn-primary btn-lg">{{ $t("jumbotron.learnMore")
-                        }}</a>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                        <!-- <a type="button" href="#about" class="btn btn-primary btn-lg">{{ $t("jumbotron.learnMore")
+                        }}</a> -->
                         <RouterLink to="/menu" class="btn btn-primary btn-lg">{{ $t("jumbotron.playNow") }} <span
                                 class="badge rounded-pill text-bg-warning">beta</span></RouterLink>
                         <!--                         <button id="disabled" type="button" class="btn btn-primary btn-lg" disabled>{{
@@ -114,5 +118,13 @@ a.dropdown-item:active {
 
 .dropdown-item.active {
     background-color: #e64343;
+}
+
+.btn-link {
+    color: #ff4d4d;
+}
+
+.btn-link:hover {
+    color: #b33636;
 }
 </style>
