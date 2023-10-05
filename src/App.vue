@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
+import Navbar from "./components/Navbar.vue";
 
 </script>
 
@@ -30,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <!-- <Navbar @locale-changed="saveLocale" @toggle-theme="toggleTheme" /> -->
+  <Navbar @locale-changed="saveLocale" @toggle-theme="toggleTheme" />
   <RouterView @locale-changed="saveLocale" :theme="theme" />
   <!-- <Footer /> -->
 </template>
