@@ -1,5 +1,7 @@
 # hangman-website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c92a9bf5-28df-4fd4-b292-f96e7c10737d/deploy-status)](https://app.netlify.com/sites/hangman-it/deploys)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
