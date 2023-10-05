@@ -1,22 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import { useDark, useToggle } from "@vueuse/core";
 import { getAuth } from "firebase/auth";
 import { auth } from '@/firebase.js';
 import { onMounted, ref } from "vue";
-const isDark = useDark({
-  selector: "body", //element to add attribute to
-  attribute: "theme", // attribute name
-  valueDark: "custom-dark", // attribute value for dark mode
-  valueLight: "custom-light", // attribute value for light mode
-});
 const emit = defineEmits(['toggleTheme'])
-
-const toggleDark = useToggle(isDark);
-const toggleTheme = () => {
-  toggleDark();
-  emit("toggleTheme", isDark.value);
-}
 
 const isLoggedIn = ref(false);
 const isEmailVerified = ref(false);
@@ -44,7 +31,6 @@ const unsubscribe = auth.onAuthStateChanged(() => {
 });
 
 onMounted(() => {
-  emit("toggleTheme", isDark.value || false);
   unsubscribe();
 })
 </script>
@@ -53,13 +39,9 @@ onMounted(() => {
 export default {
   data() {
     return {
-      isDarkMode: false
     };
   },
   methods: {
-    toggleTheme() {
-      this.isDarkMode = !this.isDarkMode;
-    },
     changeLocale(locale) {
       this.$i18n.locale = locale;
       this.$emit("locale-changed", locale);

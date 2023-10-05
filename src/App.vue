@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <Navbar @locale-changed="saveLocale" @toggle-theme="toggleTheme" />
+  <Navbar @locale-changed="saveLocale" />
   <RouterView :theme="theme" />
   <!-- <Footer /> -->
 </template>
